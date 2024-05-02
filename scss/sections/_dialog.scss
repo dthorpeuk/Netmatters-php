@@ -1,0 +1,118 @@
+.cookie-dialog{
+    
+}
+
+.cookie-dialog-background{
+    display: none;
+}
+.dialog-visible{
+    display: block;
+}
+.dialog-outer{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;//Should be above all the actual features of the page
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-pack: center !important;
+    padding: 30px;
+}
+.dialog-inner{
+
+    width: 600px;
+    margin: auto;
+}
+.dialog-content{
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    background-clip: padding-box;
+    outline: none;
+   // max-width: 600px;
+}
+.dialog-header{
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    min-height: 16.42857143px;
+}
+
+
+.dialog-header h3{
+    margin: 0;
+    line-height: 1.42857143;
+}
+.dialog-body{
+    position: relative;
+    padding: 20px;
+}
+p a:hover{
+    text-decoration: underline;
+}
+.dialog-footer{
+    margin: 0;
+    padding: 19px 20px 20px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+.dialog-footer::before{
+    content: " ";
+    display: table;
+}
+.dialog-footer::after{
+    content: " ";
+    display: table;
+}
+.dialog-row{
+   // margin-left: -15px;
+  //  margin-right: -15px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+   // flex-wrap: wrap;
+   @include mq(x-small){
+    flex-direction: column;
+   }
+}
+.dialog-row::before{
+    // content: " ";
+    // display: table;
+}
+.dialog-row::after{
+    // content: " ";
+    // display: table;
+}
+.dialog-row div{
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 40%;
+    // max-width: 264px;
+    // height: 47px;
+    background-color: #999AA2;
+    text-align: center;
+    @include mq(x-small){
+        width: 90%;
+       }
+}
+.dialog-row div + div{
+@include standard-text-button($dark-lavender,$dark-lavender-h);
+}
+.dialog-row div a{
+   // background-color: black;
+    width: 100%;
+}

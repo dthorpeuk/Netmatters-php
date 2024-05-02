@@ -1,0 +1,14 @@
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
+}
+@function get-diff($first,$second){
+	@return $first - $second;
+}
+@function width-for-triangle($w)
+{
+	@return $w/2;
+}
+// @function get-display-nav($n)
+// {
+//     @return('.nav__item--dropdown-#{$n}');
+// }

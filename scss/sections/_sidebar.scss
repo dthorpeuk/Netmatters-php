@@ -1,0 +1,117 @@
+////////////////////////////////
+/// Sidebar////////////////////
+/// ///////////////////////////
+.sidebar{
+    //display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    height: 100%;
+    background-color: #333645;
+    width: 275px;
+    overflow: auto;
+    @include mq(medium-up){
+        width: 350px;
+    }
+}
+.side-visible{
+    display: block;
+}
+.sidebar-sm{
+    display: none;
+    padding: 21px;
+    @include reveal(block, small-down);
+}
+.sidebar>.sidebar-sm>ul>li:hover>a {
+    background-color: hsla(0, 0%, 100%, .05);
+}
+.sidebar-sm ul{
+    margin: -20px 0 0;
+    width: 100%;
+}
+.side-top-contact{
+  //  padding: 20px;
+}
+.side-top-contact a{
+    font-size: 1.125rem;
+    text-decoration: none;
+    padding: 19px 0 18px;
+    display: block;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    outline: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid hsla(0, 0%, 100%, .1);
+}
+.sidebar-sm ul li a{
+    font-size: 1.125rem;
+    text-decoration: none;
+    padding: 19px 0 18px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    outline: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid hsla(0, 0%, 100%, .1);
+
+
+}
+.sidebar-sm ul li{
+    //padding: 20px 0 0;
+}
+.side-menu-banner{
+    padding: 20px 0 0;
+}
+.side-banner-icon{
+    padding-bottom: 10px;
+    font-size: 1.438rem;
+    //color: #fff;
+}
+.side-link-icon::before{
+    font-family: 'icomoon';
+    content: "\e928";
+}
+.side-content{
+    text-align: left;
+}
+.side-container{
+    margin-top: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.sidebar .group{
+    display: block;
+    color: #fff;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+}
+li:hover .group {
+    background-color: hsla(0, 0%, 100%, .05);
+}
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li{
+   // border-top: 1px solid rgba(0, 0, 0, .45);
+}
+.sidebar ul li>.side-content{
+    border-top: 1px solid hsla(0, 0%, 100%, .05);
+    display: block;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .25);
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-size: .875rem;
+    text-decoration: none;
+    position: relative;
+}

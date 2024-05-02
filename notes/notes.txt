@@ -1,0 +1,5 @@
+Add hover effect for contact-us location 'view more' buttons
+Top border for breadcrumb
+Fix box-sizing changes everywhere
+Animation for collapsable
+Blue outline on focus for all text inputs - DONE

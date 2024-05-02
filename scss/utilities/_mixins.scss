@@ -1,0 +1,154 @@
+//Media Queries
+@mixin mq($s){
+    @if $s == "x-small"{
+        @media (max-width:  $brkpoint-sm-one ){
+            @content;
+        }
+    }
+    @else if $s == "small"{
+        @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md-one){
+            @content;
+        }
+    }
+    @else if $s == "small-up"{
+        @media (min-width: $brkpoint-sm) {
+            @content;
+        }
+    }
+    @else if $s == "small-down"{
+        @media (max-width: $brkpoint-md-one){
+            @content;
+        }
+    }
+    @else if $s == "medium"{
+        @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg-one){
+            @content;
+        }
+    }
+    @else if $s == "medium-up"{
+        @media (min-width: $brkpoint-md){
+            @content;
+        }
+    }
+    @else if $s == "medium-down"{
+        @media (max-width: $brkpoint-lg-one){
+            @content;
+        }
+    }
+    @else if $s == "x-medium"{
+        @media (min-width: $brkpoint-xmd) and (max-width: $brkpoint-xmd-one){
+            @content;
+        }
+    }
+    @else if $s == "large"{
+        @media (min-width: $brkpoint-lg){
+            @content;
+        }
+    }
+    // @else if $s == "large"{
+    //     @media (min-width: $brkpoint-lg){
+    //         @content;
+    //     }
+    // }
+}
+@mixin reveal($disp,$min){
+   @include mq($min){
+    display: #{$disp};
+    }
+
+}
+// @mixin standard-text-button($fs:$base__font-size){
+//     font-family: $font-family-button-default;
+//     color:white;
+//     font-size: $fs;
+//     text-transform: uppercase;
+// }
+@mixin standard-text-button($bgc:black,$hov:grey){
+
+
+    background-color: $bgc;
+    border-color: $bgc;
+    &:hover{
+        background-color: $hov;
+        border-color: $hov;
+    }
+}
+@mixin standard-text-header($fs:$base__font-size){
+    font-family: $font-family-button-default;
+    //color:$fc;
+    font-size: $fs;
+    text-decoration: none;
+    //text-transform: uppercase;
+}
+//Selects and does all the stuff that is needed to generate the css for a nav and nav-dropdown
+@mixin dropdown-generic($n)
+{
+    .nav__item--dropdown-#{$n}{
+      //  background-color: map.get(#{$n});
+      //background-color: blue;
+        background-color: map-get($drop-down-colors,$n );
+    }
+    .nav__item--icon-#{$n}{
+        color: map-get($drop-down-colors,$n );
+    }
+    .nav-item:hover .nav__item--icon-#{$n}{
+        color: white;
+    }
+
+    .nav-item:hover .nav__item--dropdown-#{$n}{
+        display: block;
+        //background-color: #555;
+    }
+     .nav-item-#{$n}:hover{
+        $lcol : map-get($drop-down-colors,$n );
+        background-color: lighten( $lcol , 10%);
+    }
+    .nav-item-#{$n} > .triangle-down{
+        $lcol : map-get($drop-down-colors,$n );
+        border-top-color: lighten( $lcol , 10%);
+    }
+}
+@mixin tab-generic($n){
+    .tab#{$n}{
+        $l-tab: tab#{$n};
+        grid-area: $l-tab;
+        color:black;
+    }
+    .tab#{$n} .tab-image-circle{
+        background-color: map-get($drop-down-colors,$n);
+    }
+    .tab#{$n} .tab__button{
+        background-color: map-get($drop-down-colors,$n);
+    }
+    .tab#{$n}:hover{
+        background-color: map-get($drop-down-colors,$n);
+        
+        top:-10px;
+    }
+    .tab#{$n}:hover .tab__button{
+        background-color: $base-background;
+        color: map-get($drop-down-colors,$n);
+    }
+    .tab#{$n}:hover p{
+        color: white;
+    }
+    .tab#{$n}:hover .tab-header{
+        color: white;
+    }
+    .tab#{$n}:hover .tab-image-circle{
+        background-color: white;
+        color: map-get($drop-down-colors,$n);
+    }
+    .tab#{$n}:hover  .tab__icon-#{$n}{
+        color: map-get($drop-down-colors,$n);
+    }
+}
+// @mixin side-sm-generic($n){
+//     .side-banner-icon-#{$n}{
+//         color: map-get($drop-down-colors, $n);
+//     }
+
+// }
+// @mixin display-nav-dropdown($col){
+
+// }

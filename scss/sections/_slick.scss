@@ -1,0 +1,237 @@
+/////////////////
+//Slick section//
+/////////////////
+.slick-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url("../images/home-YLei.webp");
+    background-position: 50%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    float: top;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    //right:0;
+}
+.banner{
+
+}
+.item{
+    width: 100%;
+    position: relative;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //min-height: 550px;
+    height: 550px;
+}
+.img-container::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, transparent 25%, #000);
+    z-index: 3;
+}
+.img-container{
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.img-container picture{
+    width: 100%;
+    height: 100%;
+}
+picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .content{
+    position: relative;
+    z-index: 4;
+    padding: 3.75rem 0;
+    min-height: 430px;
+}
+.content >*{
+    text-align: center;
+    justify-content: center;
+    @include mq(medium-up){
+        text-align: left;
+        justify-content: left;
+    }
+}
+.banner .content .container .text{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin: 0 0 1.25rem;
+    font-weight: 600;
+    @include mq(medium){
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+}
+.banner .content .text h1{ 
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin: 0 0 1.25rem;
+    font-weight: 600;
+    color: white;
+    @include mq(medium-up){
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+}
+
+.banner .content .text p{ 
+    margin-bottom: .375rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: #fff;
+    @include mq(medium-up){
+        font-size: 1.625rem;
+        line-height: 2.5rem;
+    }
+
+}
+.content>* p+.btn{
+    margin-top: 1.938rem;
+    margin-bottom: 1.125rem;
+}
+
+@for $i from 1 to 8{
+    .slide#{$i}-btn{
+       @include standard-text-button(map-get($slick-list-colors,$i),map-get($slick-list-colors-h,$i)); 
+    }
+    
+}
+//Slick plugin style modification
+.slick-dots{
+    bottom: 44px;
+    
+    line-height: 19px;
+    
+}
+.slick-dots li button{
+   // font-size: 1.75rem;
+}
+.slick-dots li button::before{
+    font-size: .75rem;
+    color: #666;
+    opacity: 0.75;
+  //  background-color: hsla(0, 0%, 100%, .5);
+    border-radius: 50%;
+    line-height: 19px;
+    
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: white;
+    border: 2px white solid;
+}
+
+.slick-content{
+    padding: 3.75rem 0;
+
+}
+// .content-container{
+//     margin-left: auto;
+//     margin-right: auto;
+    
+//     @include mq(small){
+//         width: 750px;
+//     }
+//     @include mq(medium){
+//         width: 970px;
+//     }
+//     @include mq(large){
+//         width: 1200px;
+//     }
+// }
+.slick-text{
+    overflow-x: hidden;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    //width: 70%;
+    color: white;
+    align-items: center;
+    text-align: center;
+    @include mq(medium-up){
+        align-items:flex-start;
+        text-align: left;
+        justify-content: left;
+    }
+    
+}
+.slick-text h1{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 600;
+    @include mq(small-up){
+        
+    }
+    @include mq(medium-up){
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+    @include mq(large){
+        
+    }
+}
+.slick-text p{
+    font-size: 1.25rem;
+    margin-bottom: .375rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    @include mq(medium-up){
+        font-size: 1.625rem;
+        line-height: 2.5rem;
+    }
+}
+.slick-btn-container{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    //justify-content: center;
+}
+.slick-btn-container .btn{
+    display: flex;
+    align-items: center;
+    //background-color: #926fb1;
+    @include standard-text-button(#926fb1,#7e57a0);
+    margin-top: 1.938rem;
+   // margin-bottom: 1.125rem;
+   margin-bottom: 2.125rem;
+    line-height: 50px;
+    padding: 5px 20px;
+    font-size: 1.25rem;
+}

@@ -1,0 +1,232 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Layout constants
+$nav-height: 100px;
+$nav-item-width:167px;
+$nav-item-width-m:134px;
+$base__font-size : 16px;
+$tab-grid-width: 60%;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?xyvfzo');
+    src:  url('../fonts/icomoon.eot?xyvfzo#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?xyvfzo') format('truetype'),
+      url('../fonts/icomoon.woff?xyvfzo') format('woff'),
+      url('../fonts/icomoon.svg?xyvfzo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+//Font Stacks
+$font-family-body-default: "Lato",Helvetica,Arial,sans-serif;
+$font-family-button-default : 'Poppins', 'sans-serif';
+
+$button-text-default : 'Poppins', 'sans-serif';
+
+//Icons
+.icon-cogs::before{
+  //color:inherit;
+  content: "\e995";
+}
+.icon-briefcase::before{
+  content: "\e918";
+}
+.icon-crossing-arrows::before{
+  content: "\e90f";
+}
+.icon-mobile::before{
+  content: "\e958";
+}
+.icon-folder::before{
+  content: "\e917";
+}
+.icon-people::before{
+  content: "\e90d";
+}
+.icon-clouddownload::before{
+  content: "\eaaf";
+}
+.icon-laptop::before{
+  content: "\e957";
+}
+.icon-cloud::before{
+  content: "\e9c1";
+}
+.icon-world::before{
+  content: "\e90b";
+}
+.icon-headset::before{
+  content: "\e910";
+}
+.icon-mortar-board::before{
+  content: "\e904";
+}
+.icon-harddrive::before{
+  content: "\e90a";
+}
+.icon-magnifying::before{
+  content: "\e986";
+}
+.icon-money::before{
+  content: "\e916";
+}
+.icon-graphup::before{
+  content: "\e915";
+}
+.icon-mail::before{
+  content: "\e90e";
+}
+.icon-pencil::before{
+  content: "\e914";
+}
+.icon-ticket::before{
+  content: "\e909";
+}
+.icon-phone-idle::before{
+  content: "\e942";
+}
+.icon-phone-active::before{
+  content: "\e901";
+}
+.icon-phone-in-sq::before{
+  content: "\e913";
+}
+.icon-gauge::before{
+  content: "\e9a6";
+}
+.icon-hands::before{
+  content: "\e912";
+}
+.icon-papers::before{
+  content: "\e925";
+}
+.icon-clock::before{
+  content: "\e94e";
+}
+.icon-science::before{
+  content: "\e90c";
+}
+.icon-shield::before{
+  content: "\e906";
+}
+.icon-lock-locked::before{
+  content: "\e98f";
+}
+.icon-element::before{
+  content: "\ea80";
+}
+.icon-question::before{
+  content: "\e919";
+}
+.icon-downloadhd::before{
+  content: "\e9c7";
+}
+.icon-trolley::before{
+  content: "\e93a";
+}
+.icon-display::before{
+  content: "\e956";
+}
+.icon-megaphone::before{
+  content: "\e911";
+}
+.icon-chevron-down::before{
+  font-family: 'icomoon';
+  content: "\e922";
+}
+//Color Constants
+//Often Reused Colors
+$marble-blue: #67809f;
+$mid-blue:#4183d7;
+$clover-green:#2ecc71;
+$thunderbird:#d64541;
+$dark-lavender:#926fb1;
+$rich-carmine:#f62459;
+$roof-terracotta:#ce4125;
+//Often Reused Colors Hover
+$marble-blue-h:#566c88;
+$mid-blue-h:#2665b5;
+$clover-green-h:#26ab5f;
+$thunderbird-h:#c42e2a;
+$dark-lavender-h:#7e57a0;
+$rich-carmine-h:#e80a42;
+$roof-terracotta-h:"";
+
+
+
+$greyish-blue:#67809f;
+$orangeish: #d64541;
+//Colour Implementation
+$support_button_color:#4183d7;
+$search_button_color:invert( #999aa2);
+$base-background: #fff;
+
+$tab-icon-color-1: $greyish-blue;
+$drop-down-colors:(
+1 :$marble-blue,
+2: $mid-blue,
+3: $clover-green,
+4: $thunderbird,
+5:$dark-lavender,
+6: $rich-carmine,
+7: $roof-terracotta
+);
+$slick-list-colors:(
+  1:$dark-lavender,
+  2:$marble-blue,
+  3:$mid-blue,
+  4:$clover-green,
+  5:$thunderbird,
+  6:$dark-lavender,
+  7:$rich-carmine
+);
+$slick-list-colors-h:(
+  1:$dark-lavender-h,
+  2:$marble-blue-h,
+  3:$mid-blue-h,
+  4:$clover-green-h,
+  5:$thunderbird-h,
+  6:$dark-lavender-h,
+  7:$rich-carmine-h
+);
+// Breakpoints
+
+$brkpoint-xsm    : 1px; $brkpoint-sm-one:767px;
+$brkpoint-sm    : 768px; $brkpoint-md-one:991px;
+$brkpoint-md    : 992px; 
+$brkpoint-xmd :1260px;$brkpoint-xmd-one :1259px;
+$brkpoint-lg    : 1260px;$brkpoint-lg-one:1259px;
